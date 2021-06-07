@@ -1,0 +1,13 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: authors-service
+  namespace: ozdemo01
+  labels:
+    app: authors
+spec:
+  to:
+    kind: Service
+    name: authors-service
+  port:
+    targetPort: http
